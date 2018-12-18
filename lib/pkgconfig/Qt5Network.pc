@@ -1,0 +1,14 @@
+prefix=/opt/qt512st
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Network
+Description: Qt Network module
+Version: 5.12.0
+Libs: -L${libdir} -lQt5Network 
+Libs.private: -L/opt/qt512st/lib -lQt5Core -lm -lqtpcre2 -ldl -lpthread -lQt5Core -lpthread -lm -L/opt/qt512st/lib -lqtpcre2 -ldl   
+Cflags: -DQT_NETWORK_LIB -I${includedir}/QtNetwork -I${includedir}
+Requires: Qt5Core
+
